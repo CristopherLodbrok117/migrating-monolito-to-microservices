@@ -1,0 +1,25 @@
+services:
+
+  mysql_db:
+    image: mysql:8.0  # Versión fija (evita surprises con 'latest')
+    container_name: sinaloa-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-1234}
+      MYSQL_DATABASE: sinaloa_db
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: ${DB_PASSWORD:-1234}
+    ports:
+      - "3306:3306"
+    networks:
+      - sinaloa-net
+    # volumes:
+    #  - ./db_data:/var/lib/mysql  # Persistencia de datos
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-u${DB_USER:-root}", "-p${DB_PASSWORD:-1234}" ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+networks:
+  sinaloa-net:
+    driver: bridge

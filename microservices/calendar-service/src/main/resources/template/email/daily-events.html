@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actividades del día</title>
+    <style>
+        /* Style for the list container (optional) */
+        ul.custom-list {
+          max-width: 600px;
+          margin: 20px auto;
+          padding: 0;
+          list-style: none;
+          font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* List item style */
+        .item {
+          padding: 12px 20px;
+          margin: 8px 0;
+          background-color: #f8f9fa;
+          border-left: 4px solid #007bff;
+          border-radius: 4px;
+          transition: all 0.3s ease;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        /* Hover effect */
+        .item:hover {
+          background-color: #e9ecef;
+          transform: translateX(8px);
+          border-left-color: #2c6cb0;
+          cursor: pointer;
+        }
+
+    </style>
+</head>
+<body style="margin:0; padding:0; font-family:'Segoe UI', sans-serif; background-color:#f2f2f2;">
+<table width="100%" cellpadding="0" cellspacing="0" style="padding: 30px 0;">
+    <tr>
+        <td align="center">
+            <!-- Card Container -->
+            <table width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); overflow:hidden;">
+                <!-- Header -->
+                <tr>
+                    <td style="background-color:#007bff; padding:20px; text-align:center; color:white; font-size:24px; font-weight:bold;">
+                        SinaloaApp
+                    </td>
+                </tr>
+
+                <!-- Content -->
+                <tr>
+                    <td style="padding:30px; color:#333333;">
+                        <h2 style="margin-top:0;">¡Buen día, {{username}}!</h2>
+                        <p style="font-size:16px; line-height:1.6;">
+                            Estos son tus proyectos programados para hoy:
+                        </p>
+<!--                        <p style="font-size:16px; line-height:1.6;">{{events}}</p>-->
+                        <ul class="custom-list">
+                            {{events}}
+                        </ul>
+
+                        <p style="font-size:14px; color:#777777; text-align:center; margin-top:40px;">
+                            ¡Esperamos que tengas un día productivo!
+                        </p>
+                    </td>
+                </tr>
+
+                <!-- Footer -->
+                <tr>
+                    <td style="background-color:#f8f9fa; padding:20px; text-align:center; font-size:12px; color:#888888;">
+                        &copy; 2025 SinaloaApp. Todos los derechos reservados.
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
