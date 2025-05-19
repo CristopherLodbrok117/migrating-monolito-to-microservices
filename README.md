@@ -3,7 +3,7 @@
 Cambiaremos la forma en que trabajamos la API de la aplicación Sinaloa APP. Tomaremos el sistema de archivos integrado y crearemos un microservicio donde ofrezca sus servicios. Crearemos
 otro mas para dejar el resto de los servicios.
 
-Justificación: A diferencia del servicio de archivos, el resto de los servicios tiene una cantidad de relaicones a nivel de base de datos muy robusta. El sistema de archivos es ideal para
+Justificación: A diferencia del servicio de archivos, el resto de los servicios tiene una gran cantidad de relaciones a nivel de base de datos. El sistema de archivos es ideal para
 este ejemplo, pues no cuenta con relaciones significativas. Y estas pueden ser solucionadas comunicando eventualmente ambos microservicios.
 
 ## Creación de proyecto
